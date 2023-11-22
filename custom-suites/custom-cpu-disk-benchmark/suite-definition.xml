@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!--Phoronix Test Suite v10.8.4-->
+<PhoronixTestSuite>
+    <SuiteInformation>
+        <Title>custom-cpu-disk-benchmark</Title>
+        <Version>1.0.0</Version>
+        <TestType>System</TestType>
+        <Description>--</Description>
+        <Maintainer>you :-D</Maintainer>
+    </SuiteInformation>
+    <Execute>
+        <Test>pts/fio-2.0.0</Test>
+        <Arguments>write libaio 0 1 4m 1</Arguments>
+        <Description>Type: Sequential Write - Engine: Linux AIO - Buffered: No - Direct: Yes - Block Size: 4MB - Job Count: 1 - Disk Target: Default Test Directory</Description>
+    </Execute>
+    <Execute>
+        <Test>pts/fio-2.0.0</Test>
+        <Arguments>read libaio 0 1 4m 1</Arguments>
+        <Description>Type: Sequential Read - Engine: Linux AIO - Buffered: No - Direct: Yes - Block Size: 4MB - Job Count: 1 - Disk Target: Default Test Directory</Description>
+    </Execute>
+    <Execute>
+        <Test>pts/fio-2.0.0</Test>
+        <Arguments>randwrite libaio 0 1 4k 1</Arguments>
+        <Description>Type: Random Write - Engine: Linux AIO - Buffered: No - Direct: Yes - Block Size: 4KB - Job Count: 1 - Disk Target: Default Test Directory</Description>
+    </Execute>
+    <Execute>
+        <Test>pts/fio-2.0.0</Test>
+        <Arguments>randwrite libaio 0 1 32k 1</Arguments>
+        <Description>Type: Random Write - Engine: Linux AIO - Buffered: No - Direct: Yes - Block Size: 32KB - Job Count: 1 - Disk Target: Default Test Directory</Description>
+    </Execute>
+    <Execute>
+        <Test>pts/fio-2.0.0</Test>
+        <Arguments>randwrite libaio 0 1 256k 1</Arguments>
+        <Description>Type: Random Write - Engine: Linux AIO - Buffered: No - Direct: Yes - Block Size: 256KB - Job Count: 1 - Disk Target: Default Test Directory</Description>
+    </Execute>
+    <Execute>
+        <Test>local/customized-openssl-3.1.0</Test>
+        <Arguments>sha512 60 1 1024</Arguments>
+        <Description>Algorithm: SHA512 - Duration (seconds): 60 - Parallel threads: 1 - Bytes: 1024</Description>
+    </Execute>
+    <Execute>
+        <Test>local/customized-openssl-3.1.0</Test>
+        <Arguments>sha512 60 0 1024</Arguments>
+        <Description>Algorithm: SHA512 - Duration (seconds): 60 - Parallel threads: Same as available cores - Bytes: 1024</Description>
+    </Execute>
+    <Execute>
+        <Test>pts/compress-7zip-1.10.0</Test>
+    </Execute>
+</PhoronixTestSuite>
