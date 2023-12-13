@@ -3,8 +3,8 @@
 Illustrates how to use [Phoronix Test Suite](https://www.phoronix-test-suite.com/) (PTS) in a container to run your own
 customized benchmarks.
 
-The basic idea is that you fork this repository and customize the `Dockerfile`, but you may also use the pre-built
-image (see [packages](https://github.com/users/MShekow/packages?repo_name=pts-docker-benchmark)).
+The basic idea is that you fork this repository and customize the `Dockerfile`. But you may also use the pre-built
+image (see [packages](https://github.com/users/MShekow/packages?repo_name=pts-docker-benchmark)), which is built for ARM64 and Intel/AMD64, with automatic rebuilds twice per month.
 
 The image includes a test suite which is automatically started via the `Dockerfile`s `CMD`. The suite
 contains the following tests:
