@@ -2,6 +2,8 @@ name: Build PTS Docker image
 
 on:
   workflow_dispatch: { }
+  schedule:
+    - cron: '0 5 1,15 * *'  # run this workflow twice per month (at day 1 and 15) at 5:00 AM
 
 jobs:
   build-and-push:
