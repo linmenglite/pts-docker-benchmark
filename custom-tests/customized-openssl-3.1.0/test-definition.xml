@@ -19,7 +19,7 @@
     <EnvironmentSize>430</EnvironmentSize>
     <ProjectURL>https://www.openssl.org/</ProjectURL>
     <RepositoryURL>https://github.com/openssl/openssl</RepositoryURL>
-    <Maintainer>Michael Larabel</Maintainer>
+    <Maintainer>Marius Shekow</Maintainer>
   </TestProfile>
   <TestSettings>
     <Option>

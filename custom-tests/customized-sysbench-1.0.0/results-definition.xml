@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<PhoronixTestSuite>
+    <!-- For CPU -->
+    <ResultsParser>
+        <OutputTemplate>events per second: #_RESULT_#</OutputTemplate>
+        <ResultScale>Events/sec</ResultScale>
+    </ResultsParser>
+
+    <!-- For disk -->
+    <ResultsParser>
+        <OutputTemplate>reads/s: #_RESULT_#</OutputTemplate>
+        <ResultScale>IOPS (read)</ResultScale>
+    </ResultsParser>
+    <ResultsParser>
+        <OutputTemplate>writes/s: #_RESULT_#</OutputTemplate>
+        <ResultScale>IOPS (write)</ResultScale>
+    </ResultsParser>
+    <ResultsParser>
+        <OutputTemplate>read, MiB/s: #_RESULT_#</OutputTemplate>
+        <ResultScale>MiB/s (read)</ResultScale>
+    </ResultsParser>
+    <ResultsParser>
+        <OutputTemplate>written, MiB/s: #_RESULT_#</OutputTemplate>
+        <ResultScale>MiB/s (write)</ResultScale>
+    </ResultsParser>
+
+    <!-- For memory/RAM -->
+    <ResultsParser>
+        <OutputTemplate>102400.00 MiB transferred (#_RESULT_# MiB/sec)</OutputTemplate>
+        <LineHint>MiB/sec</LineHint>
+        <ResultScale>MiB/sec</ResultScale>
+    </ResultsParser>
+</PhoronixTestSuite>
