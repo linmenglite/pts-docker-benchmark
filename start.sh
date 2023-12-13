@@ -9,4 +9,4 @@ cd /phoronix-test-suite
 ./phoronix-test-suite result-file-to-csv $TEST_RESULTS_NAME
 
 # Print the test results to stdout
-cat /root/$TEST_RESULTS_NAME
+cat /root/${TEST_RESULTS_NAME}.csv
