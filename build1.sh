@@ -1,5 +1,8 @@
 #!/bin/sh
 
+IFS="/" read -ra ADDR <<< "$PWD"  
+echo "${ADDR[0]}/${ADDR[1]}"
+
 #下载PTS所需相关依赖
 yum install -y php-cli php-gd php-xml p7zip
 
