@@ -1,3 +1,0 @@
-# Enforce that the line endings of shell scripts in the working directory are not converted to CRLF on Windows
-* text=auto
-*.sh text eol=lf
