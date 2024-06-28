@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #下载PTS所需相关依赖
-yum install -y php-cli php-gd php-xml
+yum install -y php-cli php-gd php-xml p7zip
 
 #安装PTS
 git clone https://github.com/phoronix-test-suite/phoronix-test-suite.git
