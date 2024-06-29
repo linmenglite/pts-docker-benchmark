@@ -1,13 +1,13 @@
 #!/bin/sh
 
-sudo ./build1.sh
+#sudo ./build1.sh
 
-if [ -d "phoronix-test-suite" ]; then  
-    echo "clone成功."
-else  
-    echo "clone失败." 
-    exit 1 
-fi
+#if [ -d "phoronix-test-suite" ]; then  
+    #echo "clone成功."
+#else  
+    #echo "clone失败." 
+    #exit 1 
+#fi
 
 chmod a+x performance_counter_920.sh
 
