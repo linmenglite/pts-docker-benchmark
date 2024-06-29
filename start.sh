@@ -2,10 +2,15 @@
 
 sudo ./build1.sh
 
+if [ -d "phoronix-test-suite" ]; then  
+    echo "clone成功."
+else  
+    echo "clone失败." 
+    exit 1 
+fi
 
-set -e
+chmod a+x performance_counter_920.sh
 
-export TEST_RESULTS_NAME=benchmarkresult
 sudo ./performance_counter_920.sh "phoronix-test-suite batch-run local/custom-benckmark/compress-7zip" $pwd 
 sudo ./performance_counter_920.sh "phoronix-test-suite batch-run local/custom-benckmark/Customized_Sysbench_CPU_multi_core" $pwd
 sudo ./performance_counter_920.sh "phoronix-test-suite batch-run local/custom-benckmark/Customized_Sysbench_CPU_single_core" $pwd
@@ -24,5 +29,3 @@ sudo ./performance_counter_920.sh "phoronix-test-suite batch-run local/custom-be
 
 
 
-# Print the test results to stdout
-cat /root/${TEST_RESULTS_NAME}.csv
