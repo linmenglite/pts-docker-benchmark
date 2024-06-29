@@ -1,8 +1,5 @@
 #!/bin/sh
 
-IFS="/" read -ra ADDR <<< "$PWD"  
-echo "${ADDR[0]}/${ADDR[1]}"
-
 #下载PTS所需相关依赖
 yum install -y php-cli php-gd php-xml p7zip
 
@@ -23,22 +20,22 @@ phoronix-test-suite user-config-set PromptForTestIdentifier=FALSE
 phoronix-test-suite user-config-set PromptForTestDescription=FALSE  
 phoronix-test-suite user-config-set PromptSaveName=FALSE  
 phoronix-test-suite user-config-set Configured=TRUE
-cd ..
-
 #下载测试
-phoronix-test-suite install-dependencies pts/fio-2.1.0 pts/compress-7zip-1.10.0
-phoronix-test-suite install pts/fio-2.1.0 pts/compress-7zip-1.10.0
-
+phoronix-test-suite install-dependencies pts/fio-2.1.0 
+phoronix-test-suite install-dependencies pts/compress-7zip-1.10.0
+phoronix-test-suite install pts/fio-2.1.0 
+phoronix-test-suite install pts/compress-7zip-1.10.0
+cd ..
 #安装本地测试
 
-phoronix-test-suite list-available-test
+sudo mv custom-cpu-disk-benchmark /var/lib/phoronix-test-suite/test-suites/local
+sudo mv customized-openssl-3.1.0 /var/lib/phoronix-test-suite/test-profiles/local
+sudo mv customized-sysbench-1.0.0 /var/lib/phoronix-test-suite/test-profiles/local
 
-sudo mv custom-cpu-disk-benchmark ~/.phoronix-test-suite/test-suites/local
-sudo mv customized-openssl-3.1.0 ~/.phoronix-test-suite/test-profiles/local
-sudo mv customized-sysbench-1.0.0 ~/.phoronix-test-suite/test-profiles/local
-
-phoronix-test-suite install-dependencies customized-openssl-3.1.0 customized-sysbench-1.0.0
-phoronix-test-suite install customized-openssl-3.1.0 customized-sysbench-1.0.0
+phoronix-test-suite install-dependencies customized-sysbench-1.0.0
+phoronix-test-suite install-dependencies customized-openssl-3.1.0 
+phoronix-test-suite install customized-sysbench-1.0.0
+phoronix-test-suite install customized-openssl-3.1.0 
 
 
 
