@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--Phoronix Test Suite v10.8.4-->
+<PhoronixTestSuite>
+    <SuiteInformation>
+        <Title>disk_sequential_write_4MB</Title>
+        <Version>1.0.0</Version>
+        <TestType>System</TestType>
+        <Description>--</Description>
+        <Maintainer>you :-D</Maintainer>
+    </SuiteInformation>
+    <Execute>
+        <Test>local/customized-sysbench-1.0.0</Test>
+        <Arguments>fileio 60 1 ram-dummy ram-dummy seqwr 4194304 directmode</Arguments>
+        <Description>Disk Sequential Write, Block Size: 4MB</Description>
+    </Execute>
+</PhoronixTestSuite>

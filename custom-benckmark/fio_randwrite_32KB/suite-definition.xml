@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--Phoronix Test Suite v10.8.4-->
+<PhoronixTestSuite>
+    <SuiteInformation>
+        <Title>fio_randwrite_32KB</Title>
+        <Version>1.0.0</Version>
+        <TestType>System</TestType>
+        <Description>--</Description>
+        <Maintainer>you :-D</Maintainer>
+    </SuiteInformation>
+    <Execute>
+        <Test>pts/fio-2.1.0</Test>
+        <Arguments>randwrite libaio 1 32k 1</Arguments>
+        <Description>Disk Random Write, Block Size: 32KB</Description>
+    </Execute>
+</PhoronixTestSuite>

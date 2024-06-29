@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--Phoronix Test Suite v10.8.4-->
+<PhoronixTestSuite>
+    <SuiteInformation>
+        <Title>fio_write_4MB</Title>
+        <Version>1.0.0</Version>
+        <TestType>System</TestType>
+        <Description>--</Description>
+        <Maintainer>you :-D</Maintainer>
+    </SuiteInformation>
+    <Execute>
+        <!-- Note: if you want to run the fio test in a specific directory (e.g. because you mounted a particular (networked)
+         storage to that directory, specify the absolute path to the directory, at the end of <Arguments>, e.g.
+         <Arguments>write libaio 1 4m 1 /mnt/some/specific/storage</Arguments> -->
+        <Test>pts/fio-2.1.0</Test>
+        <Arguments>write libaio 1 4m 1</Arguments> <!-- 1 is the parallel threads-->
+        <Description>Disk Sequential Write, Block Size: 4MB</Description>
+    </Execute>
+</PhoronixTestSuite>

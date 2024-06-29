@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--Phoronix Test Suite v10.8.4-->
+<PhoronixTestSuite>
+    <SuiteInformation>
+        <Title>fio_read_4MB</Title>
+        <Version>1.0.0</Version>
+        <TestType>System</TestType>
+        <Description>--</Description>
+        <Maintainer>you :-D</Maintainer>
+    </SuiteInformation>
+    <Execute>
+        <Test>pts/fio-2.1.0</Test>
+        <Arguments>read libaio 1 4m 1</Arguments>
+        <Description>Disk Sequential Read, Block Size: 4MB</Description>
+    </Execute>
+</PhoronixTestSuite>

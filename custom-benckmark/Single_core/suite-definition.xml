@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--Phoronix Test Suite v10.8.4-->
+<PhoronixTestSuite>
+    <SuiteInformation>
+        <Title>Single_core</Title>
+        <Version>1.0.0</Version>
+        <TestType>System</TestType>
+        <Description>--</Description>
+        <Maintainer>you :-D</Maintainer>
+    </SuiteInformation>
+    <Execute>
+        <Test>local/customized-openssl-3.1.0</Test>
+        <Arguments>sha512 60 1 1024</Arguments>
+        <Description>Single core, Bytes: 1024</Description>
+    </Execute>
+</PhoronixTestSuite>

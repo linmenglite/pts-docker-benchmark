@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--Phoronix Test Suite v10.8.4-->
+<PhoronixTestSuite>
+    <SuiteInformation>
+        <Title>Customized_Sysbench_CPU_multi_core</Title>
+        <Version>1.0.0</Version>
+        <TestType>System</TestType>
+        <Description>--</Description>
+        <Maintainer>you :-D</Maintainer>
+    </SuiteInformation>
+    <Execute>
+        <Test>local/customized-sysbench-1.0.0</Test>
+        <Arguments>cpu 30 0</Arguments>
+        <Description>Customized Sysbench CPU multi core</Description>
+    </Execute>
+</PhoronixTestSuite>

@@ -1,12 +1,28 @@
 #!/bin/sh
 
+sudo ./build1.sh
+
+
 set -e
 
 export TEST_RESULTS_NAME=benchmarkresult
+sudo ./performance_counter_920.sh "phoronix-test-suite batch-run local/custom-benckmark/compress-7zip" $pwd 
+sudo ./performance_counter_920.sh "phoronix-test-suite batch-run local/custom-benckmark/Customized_Sysbench_CPU_multi_core" $pwd
+sudo ./performance_counter_920.sh "phoronix-test-suite batch-run local/custom-benckmark/Customized_Sysbench_CPU_single_core" $pwd
+sudo ./performance_counter_920.sh "phoronix-test-suite batch-run local/custom-benckmark/disk_random_write_4KB" $pwd
+sudo ./performance_counter_920.sh "phoronix-test-suite batch-run local/custom-benckmark/disk_random_write_32KB" $pwd
+sudo ./performance_counter_920.sh "phoronix-test-suite batch-run local/custom-benckmark/disk_random_write_256KB" $pwd
+sudo ./performance_counter_920.sh "phoronix-test-suite batch-run local/custom-benckmark/disk_sequential_read_4MB" $pwd
+sudo ./performance_counter_920.sh "phoronix-test-suite batch-run local/custom-benckmark/disk_sequential_write_4MB" $pwd
+sudo ./performance_counter_920.sh "phoronix-test-suite batch-run local/custom-benckmark/fio_randwrite_4KB" $pwd
+sudo ./performance_counter_920.sh "phoronix-test-suite batch-run local/custom-benckmark/fio_randwrite_32KB" $pwd
+sudo ./performance_counter_920.sh "phoronix-test-suite batch-run local/custom-benckmark/fio_randwrite_256KB" $pwd
+sudo ./performance_counter_920.sh "phoronix-test-suite batch-run local/custom-benckmark/fio_read_4MB" $pwd
+sudo ./performance_counter_920.sh "phoronix-test-suite batch-run local/custom-benckmark/fio_write_4MB" $pwd
+sudo ./performance_counter_920.sh "phoronix-test-suite batch-run local/custom-benckmark/Multi_core" $pwd
+sudo ./performance_counter_920.sh "phoronix-test-suite batch-run local/custom-benckmark/Single_core" $pwd
 
-cd /phoronix-test-suite
-./phoronix-test-suite batch-run local/custom-cpu-disk-benchmark
-./phoronix-test-suite result-file-to-csv $TEST_RESULTS_NAME
+
 
 # Print the test results to stdout
 cat /root/${TEST_RESULTS_NAME}.csv
