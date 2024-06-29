@@ -28,7 +28,7 @@ phoronix-test-suite install pts/compress-7zip-1.10.0
 cd ..
 #安装本地测试
 
-sudo mv custom-benchmark /var/lib/phoronix-test-suite/test-suites/local
+sudo mv custom-benckmark /var/lib/phoronix-test-suite/test-suites/local
 sudo mv customized-openssl-3.1.0 /var/lib/phoronix-test-suite/test-profiles/local
 sudo mv customized-sysbench-1.0.0 /var/lib/phoronix-test-suite/test-profiles/local
 
